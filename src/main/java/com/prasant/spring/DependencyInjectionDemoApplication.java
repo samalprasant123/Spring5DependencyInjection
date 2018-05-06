@@ -4,7 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.prasant.spring.controller.ConstructorInjectedController;
 import com.prasant.spring.controller.MyController;
+import com.prasant.spring.controller.PropertyInjectedController;
+import com.prasant.spring.controller.SetterInjectedController;
 
 @SpringBootApplication
 public class DependencyInjectionDemoApplication {
@@ -13,5 +16,9 @@ public class DependencyInjectionDemoApplication {
 		ApplicationContext ctx = SpringApplication.run(DependencyInjectionDemoApplication.class, args);
 		MyController myController = ctx.getBean(MyController.class);
 		myController.sayHello();
+		
+		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
+		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 	}
 }
