@@ -1,4 +1,4 @@
-package com.prasant.spring.service;
+package com.prasant.service;
 
 public interface GreetingService {
 	

@@ -3,7 +3,7 @@ package com.prasant.spring.controller;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-import com.prasant.spring.service.GreetingService;
+import com.prasant.service.GreetingService;
 
 @Controller
 public class ConstructorInjectedController {
